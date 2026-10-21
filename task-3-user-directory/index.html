@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>User Directory</h1>
+            <p>Explore users and read their posts.</p>
+        </header>
+
+        <section class="toolbar">
+            <input
+                id="search-input"
+                type="search"
+                placeholder="Search by name or email..."
+                aria-label="Search users"
+            >
+
+            <select id="sort-select" aria-label="Sort users">
+                <option value="name">Name (A–Z)</option>
+                <option value="posts">Post count (high–low)</option>
+            </select>
+        </section>
+
+        <p id="status" role="status">Loading…</p>
+
+        <section id="error-section" class="message hidden">
+            <p id="error-message">Something went wrong.</p>
+            <button id="retry-button" type="button">Retry</button>
+        </section>
+
+        <section id="users-container" class="users-grid"></section>
+
+        <p id="empty-message" class="message hidden">No users found.</p>
+
+        <section id="detail-section" class="detail-section hidden">
+            <button id="back-button" type="button">← Back</button>
+            <h2 id="detail-name"></h2>
+            <p id="detail-email"></p>
+            <h3>Posts</h3>
+            <ul id="posts-list"></ul>
+        </section>
+    </main>
+</body>
+</html>

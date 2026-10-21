@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #f3f6fb;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: 8px;
+    color: #1d4ed8;
+}
+
+.page-header p {
+    color: #64748b;
+}
+
+.toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#search-input,
+#sort-select {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+}
+
+#search-input {
+    flex: 1;
+}
+
+button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    background: #2563eb;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#status {
+    color: #475569;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.user-card {
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    cursor: pointer;
+}
+
+.user-card:hover,
+.user-card:focus {
+    border-color: #2563eb;
+    outline: 2px solid #bfdbfe;
+}
+
+.user-card h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+    font-size: 20px;
+}
+
+.user-card p {
+    overflow-wrap: anywhere;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.post-count {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 20px;
+    color: #166534;
+    background: #dcfce7;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.message {
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: 8px;
+    background: white;
+}
+
+#error-section {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.detail-section {
+    margin-top: 28px;
+    padding: 24px;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    background: white;
+}
+
+.detail-section h2 {
+    color: #1d4ed8;
+}
+
+#posts-list {
+    padding-left: 22px;
+}
+
+#posts-list li {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .users-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+}
