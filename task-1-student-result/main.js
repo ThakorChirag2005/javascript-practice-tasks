@@ -47,7 +47,7 @@ console.table(
         Rank: index + 1,
         Name: name,
         Total: total,
-        "%": percentage,
+        Percentage: percentage,
         Grade: grade,
         Status: status
     }))
@@ -120,7 +120,7 @@ table.appendChild(caption);
 const tableHead = document.createElement("thead");
 const headerRow = document.createElement("tr");
 
-["Rank", "Name", "Total", "%", "Grade", "Status", "Subject Marks"]
+["Rank", "Name", "Total", "Percentage", "Grade", "Status", "Subject Marks"]
     .forEach((heading) => {
         const th = document.createElement("th");
         th.textContent = heading;
