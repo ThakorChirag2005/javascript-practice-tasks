@@ -24,5 +24,7 @@ export const students = [
         id: 5,
         name: "Vivaan Joshi",
         marks: { maths: 30, science: 55, english: 42 }
-    }
+    },
+    
+    
 ];
